@@ -41,7 +41,11 @@ public:
             stk.push(nums2[i]);
         }
 
+
+        //vector to store the result
         vector<int>result(nums1.size(),0);
+
+        //assign the value to the result vector
         for(int i=0;i<nums1.size();i++){
 
             result[i]=ans[find_index(nums2,nums1[i])];
