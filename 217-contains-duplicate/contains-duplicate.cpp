@@ -1,14 +1,27 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        unordered_map <int,int> mp;
+        // int length=nums.length();
 
-        for(auto x: nums){
-            mp[x]++;
-            if(mp[x]==2){
-                return true;
+        // int arr =new arr[length];
+
+        // for(int i=0;i<length;i++){
+        //     arr[i]=0;
+        // }
+
+        // for(int i=0;i<length;i++){
+        //     arr[nums[i]]
+        // }
+
+        unordered_map <int,int> mp;
+        for (int i=0;i<nums.size();i++){
+            mp[nums[i]]++;
+        }
+        for (auto x:mp){
+            if(x.second>1){
+                return 1;
             }
         }
-        return false;
+        return 0;
     }
 };
